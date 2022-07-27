@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5 mx-auto">
+        <div>
+            <input type="text" id="txtNum" class="form-control mx-auto w-50" placeholder="Enter your number you wanna add to array">
+            <div id="listNumber" class="alert alert-danger mt-3 w-50 mx-auto"></div>
+            <button class="btn btn-warning mx-auto d-block" onclick="addNumber()">Add number</button>
+        </div>
+        <hr>
+        <div class="accordion w-50 m-auto" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Sum of positive numbers in array
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <button class="btn btn-warning d-block" onclick="total()">Total</button>
+                    <div id="total" class="alert alert-danger mt-3 w-50"></div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Count of positive numbers in array
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <button class="btn btn-warning d-block" onclick="count()">Count</button>
+                    <div id="count" class="alert alert-danger mt-3 w-50"></div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Find smallest number in aray
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <button class="btn btn-warning d-block" onclick="min()">Min</button>
+                    <div id="min" class="alert alert-danger mt-3 w-50"></div>                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    Find smallest positive number in aray
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <button class="btn btn-warning d-block" onclick="minPositive()">Min Positive</button>
+                      <div id="minPositive" class="alert alert-danger mt-3 w-50"></div>                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                  Find last even number in aray
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <button class="btn btn-warning d-block" onclick="lastEven()">Last Even</button>
+                    <div id="lastEven" class="alert alert-danger mt-3 w-50"></div>                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                  Swap 2 values in array by position
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <input type="text" id="txtIndex1" class="form-control mb-3 w-25 d-inline" placeholder="Enter your start index">
+                  <input type="text" id="txtIndex2" class="form-control ms-5 w-25 d-inline" placeholder="Enter the destination index">
+                  <button class="btn btn-warning d-block" onclick="change()">Change</button>
+                  <div id="change" class="alert alert-danger mt-3 w-50"></div>     
+              </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+                  Sort  the array in ascending order
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <button class="btn btn-warning d-block" onclick="sortAscending()">Sort Ascending</button>
+                    <div id="sortAscending" class="alert alert-danger mt-3 w-50"></div>                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+                  Find the first prime number in the array
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <button class="btn btn-warning d-block" onclick="firstPrime()">First Prime</button>
+                    <div id="firstPrime" class="alert alert-danger mt-3 w-50"></div>                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+                  Count Integer
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <input type="text" id="txtFloat" class="form-control mx-auto w-75" placeholder="Enter your float number you wanna add to array">
+                  <div id="listFloat" class="alert alert-danger mt-3 w-75 mx-auto"></div>
+                  <button class="btn btn-warning mx-auto d-block" onclick="addFloat()">Add number</button>
+
+                    <button class="btn btn-warning d-block" onclick="countInteger()">Count Integer</button>
+                    <div id="countInteger" class="alert alert-danger mt-3 w-50"></div>   
+              </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
+                  Compare the number of negative avd positive numbers in the array
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <button class="btn btn-warning d-block" onclick="compare()">Compare</button>
+                    <div id="compare" class="alert alert-danger mt-3 w-50"></div>                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
